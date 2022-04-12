@@ -16,7 +16,7 @@ function createSignedCookie($streamHostUrl, $resourceKey, $timeout){
         return;
     }
     if(!openssl_sign($json, $signed_policy, $key, OPENSSL_ALGO_SHA1)){
-        echo '<p>Failed to sign policy: '.opeenssl_error_string().'</p>';
+        echo '<p>Failed to sign policy: '.openssl_error_string().'</p>';
         return;
     }
  
